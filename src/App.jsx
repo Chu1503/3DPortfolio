@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+// import { ComputersCanvas } from "./components/canvas";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
           <Hero />
+          {/* <ComputersCanvas /> */}
         </div>
         <About />
         <Experience />
