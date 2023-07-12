@@ -40,13 +40,22 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "technologies",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
     title: "Contact",
   },
+  
 ];
 
 const services = [
@@ -140,7 +149,7 @@ const experiences = [
     title: "Academic Intern",
     company_name: "Hewlett Packard Enterprise",
     icon: hpe,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "December 2022",
     points: [
       "Gained knowledge of Cloud Computing and utilized Microsoft Azure for the deployment of various Deep Learning models, including neural networks.",
