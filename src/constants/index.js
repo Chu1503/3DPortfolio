@@ -1,7 +1,4 @@
 import {
-  mobile,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -14,24 +11,17 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
-  webdev,
-  dbl,
-  boobs,
-  milf,
   iei,
   hpe,
   nus,
   lpd,
   cinemate,
-  illumina
+  illumina,
+  webdev,
+  uiux,
+  data,
+  ml
 } from "../assets";
 
 export const navLinks = [
@@ -64,16 +54,16 @@ const services = [
     icon: webdev,
   },
   {
-    title: "Passionate M.I.L.F Lover",
-    icon: milf,
+    title: "UI/UX Designer",
+    icon: uiux,
   },
   {
-    title: "DB Legends Player",
-    icon: dbl,
+    title: "Data Analyst",
+    icon: data,
   },
   {
-    title: "Boobs Worshiper",
-    icon: boobs,
+    title: "Machine Learning Engineer",
+    icon: ml,
   },
 ];
 
