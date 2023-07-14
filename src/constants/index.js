@@ -127,7 +127,7 @@ const experiences = [
     title: "Executive Board Member: Design Head",
     company_name: "The Institution Of Engineers India VIT",
     icon: iei,
-    iconBg: "#383E56",
+    iconBg: "#252424",
     date: "2022 - Present",
     text: ["Creatoverse"],
     points: [
@@ -139,7 +139,7 @@ const experiences = [
     title: "Academic Intern",
     company_name: "Hewlett Packard Enterprise",
     icon: hpe,
-    iconBg: "#383E56",
+    iconBg: "#252424",
     date: "December 2022",
     points: [
       "Gained knowledge of Cloud Computing and utilized Microsoft Azure for the deployment of various Deep Learning models, including neural networks.",
@@ -149,7 +149,7 @@ const experiences = [
     title: "DL Academic Intern",
     company_name: "National University of Singapore",
     icon: nus,
-    iconBg: "#383E56",
+    iconBg: "#252424",
     date: "December 2022",
     points: [
       "Acquired skills in Data Analytics and Deep Learning techniques, demonstrating proficiency through practical data analysis and obtaining an A GRADE.",
