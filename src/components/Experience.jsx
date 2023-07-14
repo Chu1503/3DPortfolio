@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -23,8 +20,6 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{
         background: experience.iconBg,
-        // width: "70px",
-        // height: "70px",
       }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -35,13 +30,13 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
     >
       <div>
-        <h3 className="text-[#168c21] text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
+        <h3 className="text-change text-[24px] font-bold">{experience.title}</h3>
+        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
           {experience.company_name}
         </p>
       </div>
@@ -52,9 +47,6 @@ const ExperienceCard = ({ experience }) => {
             key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
-            {/* <li className="text-white text-[20px] font-bold">
-              {experience.text}
-            </li> */}
             {point}
           </li>
         ))}
@@ -74,14 +66,16 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
+        <AnimatePresence initial={false}>
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={experience}
+              />
+            ))}
+          </VerticalTimeline>
+        </AnimatePresence>
       </div>
     </>
   );
