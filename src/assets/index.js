@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -30,9 +29,12 @@ import uiux from "./uiux.png";
 import data from "./data.png";
 import ml from "./ml.png";
 
+import github from "./github.png";
+import icon_cinemate from "./icon_cinemate.png";
+import icon_illumina from "./icon_illumina.png";
+
 export {
   logo,
-  github,
   menu,
   close,
   python,
@@ -57,5 +59,8 @@ export {
   webdev,
   uiux,
   data,
-  ml
+  ml,
+  github,
+  icon_cinemate,
+  icon_illumina
 };

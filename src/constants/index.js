@@ -22,7 +22,12 @@ import {
   uiux,
   data,
   ml,
+  github,
+  icon_cinemate,
+  icon_illumina
 } from "../assets";
+
+
 
 export const navLinks = [
   {
@@ -216,7 +221,8 @@ const projects = [
       },
     ],
     image: lpd,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Chu1503",
+    icon_img: github
   },
   {
     name: "CINEMATE",
@@ -238,6 +244,7 @@ const projects = [
     ],
     image: cinemate,
     source_code_link: "https://cinemate.co.in/",
+    icon_img: icon_cinemate
   },
   {
     name: "ILLUMINA",
@@ -255,6 +262,7 @@ const projects = [
     ],
     image: illumina,
     source_code_link: "https://illumina.ieivit.in/",
+    icon_img: icon_illumina
   },
 ];
 
