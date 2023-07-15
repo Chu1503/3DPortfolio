@@ -5,13 +5,13 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 
-const ExperienceCard = ({ experience, isMobile }) => {
-  const contentStyle = isMobile ? {} : {
+const ExperienceCard = ({ experience, isDesktop }) => {
+  const contentStyle = {
     background: "#252424",
     color: "#fff",
   };
 
-  const contentArrowStyle = isMobile ? {} : {
+  const contentArrowStyle = {
     borderRight: "7px solid #252424",
   };
 
@@ -55,7 +55,7 @@ const ExperienceCard = ({ experience, isMobile }) => {
 };
 
 const Experience = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
   return (
     <>
@@ -65,12 +65,12 @@ const Experience = () => {
       <h2 className={`${styles.sectionHeadText} text-center`}>Experience.</h2>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline animate={!isMobile}>
+        <VerticalTimeline animate={isDesktop}>
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
-              isMobile={isMobile}
+              isDesktop={isDesktop}
             />
           ))}
         </VerticalTimeline>

@@ -31,7 +31,6 @@ function isDesktop() {
   return window.matchMedia("(min-width: 768px)").matches;
 }
 
-
 const About = () => {
   return (
     <>
@@ -46,11 +45,11 @@ const About = () => {
       >
         I am a third year engineering student with a genuine interest in machine
         learning, data science, UI/UX design and web development. Through my
-        academic journey, I have cultivated teamwork and leadership skills by
-        collaborating with peers. I am driven by passion and maintain a diligent
-        work ethic. I am humbled by shaping experiences that have made me a
-        highly motivated individual, always seeking improvement and eager to
-        contribute to team success.
+        academic journey, I have cultivated teamwork and leadership skills by by
+        interacting with peers and drawing inspiration from my teachers. I am
+        driven by passion and maintain a diligent work ethic. I am humbled by
+        shaping experiences that makes a highly motivated individual, always
+        seeking improvement and eager to contribute to team success.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

@@ -130,7 +130,7 @@ const experiences = [
     date: "2022 - Present",
     text: ["Creatoverse"],
     points: [
-      "Exhibited leadership and project management by handling the designathon event, acquiring expertise in event management.",
+      "Demonstrated my leadership and project management skills by handling the designathon event, acquiring expertise in event management.",
       "Demonstrated my technical expertise and worked with some of the most brilliant minds on campus through the organization of Illumina, a major hackathon conducted by VIT.",
     ],
   },
