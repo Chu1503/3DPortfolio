@@ -22,7 +22,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain"/>
+          <img src="https://cdn.discordapp.com/attachments/894801439992475768/1129757168686600273/logo-small.png" alt="logo" className="w-6 h-6 object-contain"/>
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
           | Shiv Akash&nbsp;
             <span className="sm:block hidden"></span>
