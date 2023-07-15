@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Tilty from "react-tilty";
 
 import { styles } from "../styles";
 import { services } from "../constants";
@@ -10,25 +11,34 @@ const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
       variants={isDesktop() ? fadeIn("down", "spring", 1, 0.75) : {}}
-      className="w-full red-green-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full"
     >
-      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[300px] flex justify-evenly items-center flex-col">
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
+      <Tilty
+        perspective={1000}
+        scale={1.1}
+        glare
+        maxGlare={0}
+        gyroscope={isDesktop()}
+        className="red-green-gradient p-[3px] rounded-[20px] shadow-card"
+      >
+        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[300px] flex justify-evenly items-center flex-col">
+          <img
+            src={icon}
+            alt="web-development"
+            className="w-16 h-16 object-contain"
+          />
 
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
+          <h3 className="text-white text-[20px] font-bold text-center">
+            {title}
+          </h3>
+        </div>
+      </Tilty>
     </motion.div>
   </div>
 );
 
 function isDesktop() {
-  return window.matchMedia("(min-width: 768px)").matches;
+  return true;
 }
 
 const About = () => {
