@@ -1,13 +1,11 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import { motion, AnimatePresence } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -30,9 +28,6 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
     >
       <div>
         <h3 className="text-change text-[24px] font-bold">{experience.title}</h3>
@@ -58,24 +53,20 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Experience.</h2>
-      </motion.div>
+      <p className={`${styles.sectionSubText} text-center`}>
+        What I have done so far
+      </p>
+      <h2 className={`${styles.sectionHeadText} text-center`}>Experience.</h2>
 
       <div className="mt-20 flex flex-col">
-        <AnimatePresence initial={false}>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <ExperienceCard
-                key={`experience-${index}`}
-                experience={experience}
-              />
-            ))}
-          </VerticalTimeline>
-        </AnimatePresence>
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={`experience-${index}`}
+              experience={experience}
+            />
+          ))}
+        </VerticalTimeline>
       </div>
     </>
   );

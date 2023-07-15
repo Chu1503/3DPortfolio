@@ -1,17 +1,17 @@
 import {
-  javascript,
-  typescript,
+  python,
   html,
   css,
+  javascript,
   reactjs,
-  redux,
   tailwind,
-  nodejs,
-  mongodb,
   git,
+  tensorflow,
+  matlab,
+  aftereffects,
+  photoshop,
   figma,
-  docker,
-  threejs,
+  blender,
   iei,
   hpe,
   nus,
@@ -21,7 +21,7 @@ import {
   webdev,
   uiux,
   data,
-  ml
+  ml,
 } from "../assets";
 
 export const navLinks = [
@@ -45,7 +45,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  
 ];
 
 const services = [
@@ -69,11 +68,15 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "HTML",
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: "CSS",
     icon: css,
   },
   {
@@ -81,44 +84,40 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "tensorflow",
+    icon: tensorflow,
+  },
+  {
+    name: "Matlab",
+    icon: matlab,
+  },
+  {
+    name: "Aftereffects",
+    icon: aftereffects,
+  },
+  {
+    name: "Photoshop",
+    icon: photoshop,
+  },
+  {
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Blender",
+    icon: blender,
   },
 ];
 

@@ -3,19 +3,19 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
+import python from "./tech/python.png";
 import html from "./tech/html.png";
+import css from "./tech/css.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import git from "./tech/git.png";
+import tensorflow from "./tech/tensorflow.png";
+import matlab from "./tech/matlab.png";
+import aftereffects from "./tech/aftereffects.png";
+import photoshop from "./tech/photoshop.png";
+import figma from "./tech/figma.png";
+import blender from "./tech/blender.png";
 
 import iei from "./company/iei.png";
 import hpe from "./company/hpe.png";
@@ -35,19 +35,19 @@ export {
   github,
   menu,
   close,
-  css,
-  docker,
-  figma,
-  git,
+  python,
   html,
+  css,
   javascript,
-  mongodb,
-  nodejs,
   reactjs,
-  redux,
   tailwind,
-  typescript,
-  threejs,
+  git,
+  tensorflow,
+  matlab,
+  aftereffects,
+  photoshop,
+  figma,
+  blender,
   iei,
   hpe,
   nus,

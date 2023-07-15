@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
-import * as THREE from "three"; // Import THREE from three library
+import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
@@ -9,7 +9,7 @@ const Ball = ({ imgUrl }) => {
   const [decal, setDecal] = useState(null);
 
   useEffect(() => {
-    const textureLoader = new THREE.TextureLoader(); // Use THREE.TextureLoader
+    const textureLoader = new THREE.TextureLoader();
     textureLoader.load(imgUrl, setDecal);
   }, [imgUrl]);
 

@@ -15,19 +15,21 @@ const Earth = () => {
 const EarthCanvas = () => {
   const [shouldRenderModel, setShouldRenderModel] = useState(false);
 
-  useEffect(() => {
-    const checkNetworkSpeed = async () => {
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      if (connection) {
-        const speedMbps = connection.downlink;
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        const shouldRender = speedMbps > 1 && !isMobile;
-        setShouldRenderModel(shouldRender);
-      } else {
-        setShouldRenderModel(true); // Render model if network speed cannot be determined
-      }
-    };
+  const checkNetworkSpeed = async () => {
+    const connection = navigator.connection;
+    if (connection) {
+      const speedMbps = connection.downlink;
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+      const shouldRender = speedMbps > 1 && !isMobile;
+      setShouldRenderModel(shouldRender);
+    } else {
+      setShouldRenderModel(true); // Render model if network speed cannot be determined
+    }
+  };
 
+  useEffect(() => {
     checkNetworkSpeed();
   }, []);
 
@@ -59,7 +61,7 @@ const EarthCanvas = () => {
         </Canvas>
       ) : (
         <img
-          src="https://example.com/your-gif-url.gif"
+          src="./src/assets/cinemate.png"
           alt="Loading GIF"
           style={{ width: "100%", height: "100%" }}
         />

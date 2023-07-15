@@ -15,14 +15,14 @@ module.exports = {
         // change: "#168c21",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #1F3624",
+        card: "0px 35px 120px -15px #36201f",
       },
       screens: {
         xs: "450px",
       },
-      // backgroundImage: {
-      //   "hero-pattern": "url('/src/assets/herobg.png')",
-      // },
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/herobg.png')",
+      },
     },
   },
   plugins: [],
