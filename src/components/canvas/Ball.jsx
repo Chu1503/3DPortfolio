@@ -1,17 +1,17 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
-import * as THREE from "three";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Ball = ({ imgUrl }) => {
-  const [decal, setDecal] = useState(null);
-
-  useEffect(() => {
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(imgUrl, setDecal);
-  }, [imgUrl]);
+const Ball = (props) => {
+  const [decal] = useTexture([props.imgUrl]);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -25,15 +25,13 @@ const Ball = ({ imgUrl }) => {
           polygonOffsetFactor={-5}
           flatShading
         />
-        {decal && (
-          <Decal
-            position={[0, 0, 1]}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            scale={1}
-            map={decal}
-            flatShading
-          />
-        )}
+        <Decal
+          position={[0, 0, 1]}
+          rotation={[2 * Math.PI, 0, 6.25]}
+          scale={1}
+          map={decal}
+          flatShading
+        />
       </mesh>
     </Float>
   );
