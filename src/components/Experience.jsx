@@ -1,20 +1,24 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-
 import "react-vertical-timeline-component/style.min.css";
-
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, isMobile }) => {
+  const contentStyle = isMobile ? {} : {
+    background: "#252424",
+    color: "#fff",
+  };
+
+  const contentArrowStyle = isMobile ? {} : {
+    borderRight: "7px solid #252424",
+  };
+
   return (
     <VerticalTimelineElement
-      contentStyle={{
-        background: "#252424",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #252424" }}
+      contentStyle={contentStyle}
+      contentArrowStyle={contentArrowStyle}
       date={experience.date}
       iconStyle={{
         background: experience.iconBg,
@@ -51,6 +55,8 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
   return (
     <>
       <p className={`${styles.sectionSubText} text-center`}>
@@ -59,11 +65,12 @@ const Experience = () => {
       <h2 className={`${styles.sectionHeadText} text-center`}>Experience.</h2>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline animate={!isMobile}>
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              isMobile={isMobile}
             />
           ))}
         </VerticalTimeline>

@@ -16,7 +16,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div  variants={isDesktop() ? fadeIn("down", "spring", 1, 0.75) : {}}>
       <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full">
         <div className="relative w-full h-[230px]">
           <img
@@ -58,6 +58,10 @@ const ProjectCard = ({
     </motion.div>
   );
 };
+
+function isDesktop() {
+  return window.matchMedia("(min-width: 768px)").matches;
+}
 
 const Works = () => {
   return (

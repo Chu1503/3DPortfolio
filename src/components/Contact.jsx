@@ -7,6 +7,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import "./Contact.css"; // Import the CSS file
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -125,10 +127,24 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className={`xl:flex-1 xl:h-auto md:h-[550px] h-[350px] contact-earth-canvas`}
       >
         <EarthCanvas />
       </motion.div>
+
+      <motion.img
+        variants={slideIn("right", "tween", 0.2, 1)}
+        src="https://cdn.discordapp.com/attachments/894801439992475768/1129756255167197314/logo.png"
+        alt="Mobile view image"
+        className={`xl:flex-1 xl:h-auto md:h-[550px] h-[350px] contact-image`}
+      />
+
+      {/* <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
+      </motion.div> */}
     </div>
   );
 };
