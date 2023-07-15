@@ -9,8 +9,14 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
-      variants={fadeIn("down", "spring", 0.75)}
+      variants={fadeIn("down", "spring", 1, 0.75)}
       className="w-full red-green-gradient p-[1px] rounded-[20px] shadow-card"
+      style={{
+        // Media query styles for desktop view
+        "@media (max-width: 768px)": {
+          display: "none", // Hide the line on mobile view
+        },
+      }}
     >
       <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[300px] flex justify-evenly items-center flex-col">
         <img
@@ -53,6 +59,17 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
+      {/* <motion.div
+        variants={fadeIn("down", "spring", 1, 0.75)}
+        className="w-full red-green-gradient p-[1px] rounded-[20px] shadow-card"
+        style={{
+          // Media query styles for desktop view
+          "@media (max-width: 768px)": {
+            display: "none" // Hide the line on mobile view
+          }
+        }}
+      /> */}
     </>
   );
 };
