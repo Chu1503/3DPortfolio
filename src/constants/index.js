@@ -221,7 +221,7 @@ const projects = [
       },
     ],
     image: lpd,
-    source_code_link: "https://github.com/Chu1503",
+    source_code_link: "https://github.com/Chu1503/LPD-OCR",
     icon_img: github
   },
   {
