@@ -19,6 +19,7 @@ import blender from "./tech/blender.png";
 import iei from "./company/iei.png";
 import hpe from "./company/hpe.png";
 import nus from "./company/nus.png";
+import qmax from "./company/qmax.png";
 
 import lpd from "./lpd.png";
 import cinemate from "./cinemate.png";
@@ -62,5 +63,6 @@ export {
   ml,
   github,
   icon_cinemate,
-  icon_illumina
+  icon_illumina,
+  qmax
 };

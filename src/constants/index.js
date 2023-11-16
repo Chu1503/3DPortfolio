@@ -24,7 +24,8 @@ import {
   ml,
   github,
   icon_cinemate,
-  icon_illumina
+  icon_illumina,
+  qmax
 } from "../assets";
 
 
@@ -132,7 +133,7 @@ const experiences = [
     company_name: "The Institution Of Engineers India VIT",
     icon: iei,
     iconBg: "#252424",
-    date: "2022 - Present",
+    date: "January 2022 - Present",
     text: ["Creatoverse"],
     points: [
       "Demonstrated my leadership and project management skills by handling the designathon event, acquiring expertise in event management.",
@@ -144,7 +145,7 @@ const experiences = [
     company_name: "Hewlett Packard Enterprise",
     icon: hpe,
     iconBg: "#252424",
-    date: "December 2022",
+    date: "December 2022 - January 2023",
     points: [
       "Gained knowledge of Cloud Computing and utilized Microsoft Azure for the deployment of various Deep Learning models, including neural networks.",
     ],
@@ -154,24 +155,22 @@ const experiences = [
     company_name: "National University of Singapore",
     icon: nus,
     iconBg: "#252424",
-    date: "December 2022",
+    date: "December 2022 - January 2023",
     points: [
       "Acquired skills in Data Analytics and Deep Learning techniques, demonstrating proficiency through practical data analysis and obtaining an A GRADE.",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: "Embedded Systems & PCB Design Intern",
+    company_name: "Qmax Systems Inc.",
+    icon: qmax,
+    iconBg: "#252424",
+    date: "September 2023 - November 2023",
+    points: [
+      "Developed an RO Control Board using Nuvoton NuMaker-MS51PC microcontroller, integrating a TM1638 module with advanced techniques such as UART, SPI Communication, and ADC integration.",
+      "Learnt and worked on the complete PCB Design process, involving schematic creation, footprint creation, netlist generation, component placement, routing and Gerber file exports.",
+    ],
+  },
 ];
 
 const testimonials = [
